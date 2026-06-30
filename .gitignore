@@ -1,0 +1,63 @@
+# CogniMirror Root Gitignore
+
+# Environment Files
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+venv/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Next.js build and cache
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+
+# Python Cache & Build
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+coverage/
+htmlcov/
+
+# Database & Vectors
+*.db
+*.sqlite
+chroma_db/
+
+# Application Uploads & Runtime Logs
+backend/uploads/
+uploads/
+*.log
+logs/
+
+# IDE and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Executables & Binaries
+*.exe
+ngrok.exe
