@@ -1,7 +1,7 @@
 import json
 import requests
 import traceback
-from backend.app.core.config import settings
+from app.core.config import settings
 
 class GeminiService:
     @staticmethod

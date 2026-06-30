@@ -1,6 +1,6 @@
 import os
 import chromadb
-from backend.app.core.config import settings
+from app.core.config import settings
 
 # Setup persistent directory
 DB_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "chroma_db"))

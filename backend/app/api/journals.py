@@ -4,12 +4,12 @@ import shutil
 from fastapi import APIRouter, Depends, UploadFile, File, Form, HTTPException, status, Request
 from sqlalchemy.orm import Session
 from typing import List, Optional
-from backend.app.api.deps import get_db, get_current_user
-from backend.app.services.journal_service import JournalService
-from backend.app.services.insight_service import InsightService
-from backend.app.repositories.journal import JournalRepository
-from backend.app.schemas.journal import JournalResponse, JournalUpdate
-from backend.app.models.user import User
+from app.api.deps import get_db, get_current_user
+from app.services.journal_service import JournalService
+from app.services.insight_service import InsightService
+from app.repositories.journal import JournalRepository
+from app.schemas.journal import JournalResponse, JournalUpdate
+from app.models.user import User
 
 router = APIRouter()
 
@@ -42,7 +42,7 @@ def create_journal(
     
     return journal
 
-from backend.app.services.sarvam_stt import SarvamSTTService
+from app.services.sarvam_stt import SarvamSTTService
 
 @router.post("/upload")
 async def upload_audio(

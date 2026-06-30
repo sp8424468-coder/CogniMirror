@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from typing import List, Optional
-from backend.app.models.journal import Journal
-from backend.app.schemas.journal import JournalCreate, JournalUpdate
+from app.models.journal import Journal
+from app.schemas.journal import JournalCreate, JournalUpdate
 
 class JournalRepository:
     @staticmethod

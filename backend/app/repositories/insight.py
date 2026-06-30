@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from typing import List, Optional
-from backend.app.models.insight import Insight
-from backend.app.schemas.insight import InsightCreate
+from app.models.insight import Insight
+from app.schemas.insight import InsightCreate
 
 class InsightRepository:
     @staticmethod

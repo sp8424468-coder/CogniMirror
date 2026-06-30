@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
-from backend.app.api.deps import get_db, get_current_user
-from backend.app.services.insight_service import InsightService
-from backend.app.repositories.insight import InsightRepository
-from backend.app.schemas.insight import InsightResponse, DashboardStats
-from backend.app.models.user import User
+from app.api.deps import get_db, get_current_user
+from app.services.insight_service import InsightService
+from app.repositories.insight import InsightRepository
+from app.schemas.insight import InsightResponse, DashboardStats
+from app.models.user import User
 
 router = APIRouter()
 

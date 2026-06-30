@@ -2,7 +2,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Any, Union
 import jwt
 import bcrypt
-from backend.app.core.config import settings
+from app.core.config import settings
 
 def create_access_token(
     subject: Union[str, Any], expires_delta: Union[timedelta, None] = None

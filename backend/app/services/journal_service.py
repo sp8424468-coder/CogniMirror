@@ -3,10 +3,10 @@ import uuid
 import shutil
 from sqlalchemy.orm import Session
 from fastapi import UploadFile
-from backend.app.repositories.journal import JournalRepository
-from backend.app.schemas.journal import JournalCreate
-from backend.app.models.journal import Journal
-from backend.app.services.sarvam_stt import SarvamSTTService
+from app.repositories.journal import JournalRepository
+from app.schemas.journal import JournalCreate
+from app.models.journal import Journal
+from app.services.sarvam_stt import SarvamSTTService
 
 class JournalService:
     @staticmethod

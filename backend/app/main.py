@@ -2,10 +2,10 @@ import os
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
-from backend.app.core.config import settings
-from backend.app.core.database import engine
-from backend.app.models import Base
-from backend.app.api import auth, journals, insights, profile
+from app.core.config import settings
+from app.core.database import engine
+from app.models import Base
+from app.api import auth, journals, insights, profile
 
 # Ensure static uploads directory exists
 os.makedirs("backend/uploads", exist_ok=True)

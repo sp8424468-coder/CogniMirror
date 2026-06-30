@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
 from typing import Optional
-from backend.app.models.user import User
-from backend.app.schemas.user import UserCreate, UserUpdate
-from backend.app.core.security import get_password_hash
+from app.models.user import User
+from app.schemas.user import UserCreate, UserUpdate
+from app.core.security import get_password_hash
 
 class UserRepository:
     @staticmethod

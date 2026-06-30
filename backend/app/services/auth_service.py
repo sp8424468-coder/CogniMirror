@@ -1,9 +1,9 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
-from backend.app.repositories.user import UserRepository
-from backend.app.schemas.user import UserCreate, LoginRequest, Token
-from backend.app.core.security import verify_password, create_access_token
-from backend.app.models.user import User
+from app.repositories.user import UserRepository
+from app.schemas.user import UserCreate, LoginRequest, Token
+from app.core.security import verify_password, create_access_token
+from app.models.user import User
 
 class AuthService:
     @staticmethod

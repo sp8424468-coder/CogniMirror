@@ -1,11 +1,11 @@
 from sqlalchemy.orm import Session
 from typing import Dict, List
-from backend.app.repositories.insight import InsightRepository
-from backend.app.repositories.journal import JournalRepository
-from backend.app.schemas.insight import InsightCreate, DashboardStats
-from backend.app.models.insight import Insight
-from backend.app.models.journal import Journal
-from backend.app.services.gemini_service import GeminiService
+from app.repositories.insight import InsightRepository
+from app.repositories.journal import JournalRepository
+from app.schemas.insight import InsightCreate, DashboardStats
+from app.models.insight import Insight
+from app.models.journal import Journal
+from app.services.gemini_service import GeminiService
 
 class InsightService:
     @staticmethod
@@ -16,7 +16,7 @@ class InsightService:
             return existing
 
         # 1. Add/Index current journal transcript in ChromaDB
-        from backend.app.services.chroma_service import ChromaService
+        from app.services.chroma_service import ChromaService
         ChromaService.add_journal(journal.id, journal.title, journal.transcript or "", user_id)
 
         # 2. Perform semantic search for most similar previous journal

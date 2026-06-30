@@ -2,7 +2,7 @@ import uuid
 from sqlalchemy import Column, String, DateTime, ForeignKey, Text, JSON, Integer, Float
 from sqlalchemy.orm import relationship
 from datetime import datetime, timezone
-from backend.app.core.database import Base
+from app.core.database import Base
 
 class Insight(Base):
     __tablename__ = "insights"
