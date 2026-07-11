@@ -1,8 +1,52 @@
+#📌 Problem & Domain
+Human Experience & Productivity
+
+## 🚨 The Problem
+
+Millions of people struggle silently with stress, anxiety, depression, and unhelpful cognitive distortions without fully understanding *why* they feel that way.
+
+* **Journaling** requires high discipline and active effort that many drop quickly.
+* **Therapy** is often expensive and inaccessible to the broader public.
+* **Existing Mood Trackers** only capture surface-level ratings (e.g., "3/5 stars today") without providing context or root-cause insight.
+
+## 💡 The Solution
+
+While other apps ask *"How are you feeling?"*, **CogniMirror** asks *"What is your voice trying to tell you?"*
+
+CogniMirror enables users to speak naturally into their devices. Using speech analysis and advanced generative AI, it automatically extracts emotional tones and flags cognitive distortions (such as catastrophizing or overgeneralization), giving users instant, actionable self-reflection.
+
+
 # CogniMirror - AI Multilingual Voice Journaling Platform
 
 CogniMirror is a production-ready AI-powered multilingual voice journaling SaaS platform (AI Cognitive Companion). It enables users to record vocal reflections naturally, transcribe dialects, map recurring cognitive distortions (logical distortions) using cognitive behavioral science principles, and discover personalized emotional baseline charts.
 
----
+##🧠 Team & Approach
+
+👥 Team
+Team Visionary Minds  
+Sagar P — Project Lead & Full Stack / Backend Integration  
+Swathi R — AI / ML Integration & Speech Pipelines  
+Shreya S Hegde — Frontend UI/UX & Dashboard Analytics 
+
+🎯 Our Approach
+CogniMirror bridges the gap between raw emotional expression and structured self-awareness by removing the friction of manual journaling. Instead of relying on static ratings or manual text entries, our system analyzes natural vocal expression in real time.
+┌─────────────────┐     ┌─────────────────────┐     ┌───────────────────────┐
+│                 │     │                     │     │                       │
+│  Voice Input    │ ──► │  Speech Processing  │ ──► │  AI Analysis Engine   │
+│ (User Speech)   │     │ (Sarvam AI / STT)   │     │ (Google Gemini API)   │
+│                 │     │                     │     │                       │
+└─────────────────┘     └─────────────────────┘     └───────────────────────┘
+                                                                │
+                                                                ▼
+                                                    ┌───────────────────────┐
+                                                    │                       │
+                                                    │  Reflection Dashboard │
+                                                    │ (Distortions & Trends)│
+                                                    │                       │
+                                                    └───────────────────────┘
+1. Frictionless Voice CaptureUsers record their thoughts naturally via voice rather than typing, removing the cognitive load of traditional journaling.  
+2. Multilingual & Vernacular Speech ProcessingSarvam AI handles vernacular voice recognition and translation, allowing users to express themselves authentically in their native language.  
+3. AI Cognitive Distortion & Sentiment EngineGoogle Gemini API evaluates the transcribed text and vocal tone to detect unhelpful cognitive distortions (such as catastrophizing, overgeneralization, or all-or-nothing thinking) alongside emotional tone.  4. Actionable Reflection & Long-Term TrackingA secure Next.js & FastAPI web application aggregates daily entries into a Reflection Dashboard, visualizing mood trends, recurring thought patterns, and actionable insights over time. 
 
 ## 🏗️ Project Architecture
 
@@ -55,7 +99,43 @@ CogniMirror/
 * **Backend**: Python FastAPI, SQLAlchemy 2.0 (ORM), PyJWT, PostgreSQL / SQLite.
 * **AI Pipelines**: Google Gemini AI (Cognitive Distortion mapping), Sarvam AI STT (Voice to Text Dialects).
 
----
+##🏆 Sponsored Track
+
+Sarvam Track - Build AI Applications with Sarvam AI
+   Sarvam is used as the speech-to-text engine for the voice journaling flow.
+It is integrated in the backend to turn uploaded audio into a readable transcript that can be stored as a journal entry and used for insights.
+
+1. Audio upload
+   - When a user uploads audio, the backend saves the file in the uploads folder through journals.py.
+2. Speech-to-text call
+   - The upload route then calls the Sarvam service in sarvam_stt.py.
+3. API request to Sarvam
+   - The service reads the API key from config.py.
+   - It sends a POST request to Sarvam’s speech-to-text endpoint with:
+     - the audio file as multipart form data
+     - the model value `saaras:v3`
+     - the mode `transcribe`
+4. Response handling
+   - The response is parsed for:
+     - `transcript`
+     - `detected_language`
+     - `confidence_score`
+   - These values are returned and then used in the journal creation flow.
+5. Journal and insight generation
+   - In journal_service.py, the transcript is used to create a journal entry.
+   - That transcript also helps the app infer mood and generate cognitive insights.
+
+
+The implementation is designed to be resilient:
+- If no Sarvam API key is configured, it returns a simulated transcript instead of crashing.
+- If the API request fails, it returns an error-style transcript and confidence of zero.
+
+In short, Sarvam is being used here as a backend voice-to-text service for:
+- audio transcription
+- language detection
+- confidence scoring
+- turning voice input into journal content
+
 
 ## 🔧 Environment Variables
 
@@ -202,7 +282,24 @@ Vercel detects Next.js configurations automatically.
    - `NEXT_PUBLIC_API_URL`: Set this to your deployed FastAPI backend URL on Render (e.g. `https://cognimirror-backend.onrender.com`).
 6. Click **Deploy**. Vercel will build and launch your frontend.
 
----
+
+## Demo & Deliverables
+
+Demo Video Link : https://drive.google.com/file/d/1h7pmsWguX579sgNsm3HXVK_Cc4ge-NEu/view?usp=drivesdk
+<img width="877" height="45" alt="image" src="https://github.com/user-attachments/assets/6dd8946b-bc8e-43f3-a283-d6c58ff6667a" />
+
+Deployment Link : cogni-mirror-vert.vercel.app
+<img width="280" height="45" alt="image" src="https://github.com/user-attachments/assets/cddd694d-195a-4b28-ae23-1fdb22984aa1" />
+
+Pitch Deck / PPT : https://docs.google.com/presentation/d/1_rhHwuDA7COy75kp-uMLyoIzpctdzlKH/edit?usp=drive_link&ouid=104146868426439683838&rtpof=true&sd=true
+
+##🧬 Future Scope
+
+📈 Voice Biomarker Analysis: Expand speech processing to analyze vocal pitch, cadence, pause duration, and tone dynamics to detect early physical markers of stress and fatigue.  
+🤖 Personal Daily AI Coach: Introduce a proactive conversational assistant that offers tailored mindfulness prompts and coping strategies based on weekly emotional trends.  
+🩺 Therapist & Clinical Dashboard: Build an optional secure export module that generates structured summary reports for therapists and mental health professionals.  
+⌚ Wearable Device Integration: Connect with smartwatches and fitness trackers to correlate biometric data (heart rate, sleep patterns) with voice reflection logs.  
+🔒 On-Device & Privacy-First Processing: Implement local processing options for audio transcription to ensure maximum user data privacy and offline accessibility.  
 
 ## 🛠️ Troubleshooting
 
