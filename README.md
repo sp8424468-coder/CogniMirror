@@ -1,4 +1,4 @@
-#📌 Problem & Domain
+## 📌 Problem & Domain
 Human Experience & Productivity
 
 ## 🚨 The Problem
@@ -20,7 +20,7 @@ CogniMirror enables users to speak naturally into their devices. Using speech an
 
 CogniMirror is a production-ready AI-powered multilingual voice journaling SaaS platform (AI Cognitive Companion). It enables users to record vocal reflections naturally, transcribe dialects, map recurring cognitive distortions (logical distortions) using cognitive behavioral science principles, and discover personalized emotional baseline charts.
 
-##🧠 Team & Approach
+## 🧠 Team & Approach
 
 👥 Team
 Team Visionary Minds  
@@ -99,7 +99,7 @@ CogniMirror/
 * **Backend**: Python FastAPI, SQLAlchemy 2.0 (ORM), PyJWT, PostgreSQL / SQLite.
 * **AI Pipelines**: Google Gemini AI (Cognitive Distortion mapping), Sarvam AI STT (Voice to Text Dialects).
 
-##🏆 Sponsored Track
+## 🏆 Sponsored Track
 
 Sarvam Track - Build AI Applications with Sarvam AI
    Sarvam is used as the speech-to-text engine for the voice journaling flow.
@@ -286,14 +286,12 @@ Vercel detects Next.js configurations automatically.
 ## Demo & Deliverables
 
 Demo Video Link : https://drive.google.com/file/d/1h7pmsWguX579sgNsm3HXVK_Cc4ge-NEu/view?usp=drivesdk
-<img width="877" height="45" alt="image" src="https://github.com/user-attachments/assets/6dd8946b-bc8e-43f3-a283-d6c58ff6667a" />
 
 Deployment Link : cogni-mirror-vert.vercel.app
-<img width="280" height="45" alt="image" src="https://github.com/user-attachments/assets/cddd694d-195a-4b28-ae23-1fdb22984aa1" />
 
 Pitch Deck / PPT : https://docs.google.com/presentation/d/1_rhHwuDA7COy75kp-uMLyoIzpctdzlKH/edit?usp=drive_link&ouid=104146868426439683838&rtpof=true&sd=true
 
-##🧬 Future Scope
+## 🧬 Future Scope
 
 📈 Voice Biomarker Analysis: Expand speech processing to analyze vocal pitch, cadence, pause duration, and tone dynamics to detect early physical markers of stress and fatigue.  
 🤖 Personal Daily AI Coach: Introduce a proactive conversational assistant that offers tailored mindfulness prompts and coping strategies based on weekly emotional trends.  
