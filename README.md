@@ -22,14 +22,14 @@ CogniMirror is a production-ready AI-powered multilingual voice journaling SaaS 
 
 ## 🧠 Team & Approach
 
-###👥 Team
+##👥 Team
 
 Team Visionary Minds  
 Sagar P — Project Lead & Full Stack / Backend Integration  
 Swathi R — AI / ML Integration & Speech Pipelines  
 Shreya S Hegde — Frontend UI/UX & Dashboard Analytics 
 
-###🎯 Our Approach
+##🎯 Our Approach
 
 CogniMirror bridges the gap between raw emotional expression and structured self-awareness by removing the friction of manual journaling. Instead of relying on static ratings or manual text entries, our system analyzes natural vocal expression in real time.
 ```mermaid
@@ -289,9 +289,10 @@ Vercel detects Next.js configurations automatically.
 
 Demo Video Link : https://drive.google.com/file/d/1h7pmsWguX579sgNsm3HXVK_Cc4ge-NEu/view?usp=drivesdk
 
-Deployment Link : cogni-mirror-vert.vercel.app
+Deployment Link : https://cogni-mirror-vert.vercel.app
 
 Pitch Deck / PPT : https://docs.google.com/presentation/d/1_rhHwuDA7COy75kp-uMLyoIzpctdzlKH/edit?usp=drive_link&ouid=104146868426439683838&rtpof=true&sd=true
+
 
 
 ## 🧬 Future Scope
