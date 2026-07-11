@@ -22,28 +22,29 @@ CogniMirror is a production-ready AI-powered multilingual voice journaling SaaS 
 
 ## 🧠 Team & Approach
 
-👥 Team
+###👥 Team
+
 Team Visionary Minds  
 Sagar P — Project Lead & Full Stack / Backend Integration  
 Swathi R — AI / ML Integration & Speech Pipelines  
 Shreya S Hegde — Frontend UI/UX & Dashboard Analytics 
 
-🎯 Our Approach
+###🎯 Our Approach
+
 CogniMirror bridges the gap between raw emotional expression and structured self-awareness by removing the friction of manual journaling. Instead of relying on static ratings or manual text entries, our system analyzes natural vocal expression in real time.
-┌─────────────────┐     ┌─────────────────────┐     ┌───────────────────────┐
-│                 │     │                     │     │                       │
-│  Voice Input    │ ──► │  Speech Processing  │ ──► │  AI Analysis Engine   │
-│ (User Speech)   │     │ (Sarvam AI / STT)   │     │ (Google Gemini API)   │
-│                 │     │                     │     │                       │
-└─────────────────┘     └─────────────────────┘     └───────────────────────┘
-                                                                │
-                                                                ▼
-                                                    ┌───────────────────────┐
-                                                    │                       │
-                                                    │  Reflection Dashboard │
-                                                    │ (Distortions & Trends)│
-                                                    │                       │
-                                                    └───────────────────────┘
+```mermaid
+flowchart LR
+    A["🎤 User Speech"] --> B["🎙 Voice Input"]
+    B --> C["Sarvam AI (Speech-to-Text)"]
+    C --> D["Google Gemini AI Analysis"]
+    D --> E["Reflection Engine"]
+    E --> F["📊 Reflection Dashboard"]
+
+    F --> G["Emotion Analysis"]
+    F --> H["Cognitive Distortions"]
+    F --> I["Trends & Insights"]
+    F --> J["Action Plan"]
+```
 1. Frictionless Voice CaptureUsers record their thoughts naturally via voice rather than typing, removing the cognitive load of traditional journaling.  
 2. Multilingual & Vernacular Speech ProcessingSarvam AI handles vernacular voice recognition and translation, allowing users to express themselves authentically in their native language.  
 3. AI Cognitive Distortion & Sentiment EngineGoogle Gemini API evaluates the transcribed text and vocal tone to detect unhelpful cognitive distortions (such as catastrophizing, overgeneralization, or all-or-nothing thinking) alongside emotional tone.  4. Actionable Reflection & Long-Term TrackingA secure Next.js & FastAPI web application aggregates daily entries into a Reflection Dashboard, visualizing mood trends, recurring thought patterns, and actionable insights over time. 
@@ -102,6 +103,7 @@ CogniMirror/
 ## 🏆 Sponsored Track
 
 Sarvam Track - Build AI Applications with Sarvam AI
+   
    Sarvam is used as the speech-to-text engine for the voice journaling flow.
 It is integrated in the backend to turn uploaded audio into a readable transcript that can be stored as a journal entry and used for insights.
 
@@ -291,12 +293,17 @@ Deployment Link : cogni-mirror-vert.vercel.app
 
 Pitch Deck / PPT : https://docs.google.com/presentation/d/1_rhHwuDA7COy75kp-uMLyoIzpctdzlKH/edit?usp=drive_link&ouid=104146868426439683838&rtpof=true&sd=true
 
+
 ## 🧬 Future Scope
 
 📈 Voice Biomarker Analysis: Expand speech processing to analyze vocal pitch, cadence, pause duration, and tone dynamics to detect early physical markers of stress and fatigue.  
+
 🤖 Personal Daily AI Coach: Introduce a proactive conversational assistant that offers tailored mindfulness prompts and coping strategies based on weekly emotional trends.  
+
 🩺 Therapist & Clinical Dashboard: Build an optional secure export module that generates structured summary reports for therapists and mental health professionals.  
+
 ⌚ Wearable Device Integration: Connect with smartwatches and fitness trackers to correlate biometric data (heart rate, sleep patterns) with voice reflection logs.  
+
 🔒 On-Device & Privacy-First Processing: Implement local processing options for audio transcription to ensure maximum user data privacy and offline accessibility.  
 
 ## 🛠️ Troubleshooting
