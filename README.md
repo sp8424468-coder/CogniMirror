@@ -22,14 +22,14 @@ CogniMirror is a production-ready AI-powered multilingual voice journaling SaaS 
 
 ## 🧠 Team & Approach
 
-##👥 Team
+### 👥 Team
 
 Team Visionary Minds  
 Sagar P — Project Lead & Full Stack / Backend Integration  
 Swathi R — AI / ML Integration & Speech Pipelines  
 Shreya S Hegde — Frontend UI/UX & Dashboard Analytics 
 
-##🎯 Our Approach
+### 🎯 Our Approach
 
 CogniMirror bridges the gap between raw emotional expression and structured self-awareness by removing the friction of manual journaling. Instead of relying on static ratings or manual text entries, our system analyzes natural vocal expression in real time.
 ```mermaid
